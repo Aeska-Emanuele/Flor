@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Isabelle</title>
+
+<style>
+body {
+    background: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Flor */
+.flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+/* Centro */
+.center {
+    width: 50px;
+    height: 50px;
+    background: rgb(141, 141, 5);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+}
+
+/* Pétalas */
+.petal {
+    width: 60%;
+    height: 80px;
+    background: #ff4d88;
+    border-radius: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform-origin: center bottom;
+    transition: transform 0.8s ease;
+}
+
+    .small {
+    width: 50px;
+    height: 80px;
+}
+
+.petal:nth-child(2) { transform: translate(-50%, -100%) rotate(0deg) scaleY(0); }
+.petal:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg) scaleY(0); }
+.petal:nth-child(4) { transform: translate(-50%, -100%) rotate(180deg) scaleY(0); }
+.petal:nth-child(5) { transform: translate(-50%, -100%) rotate(270deg) scaleY(0); }
+
+.petal:nth-child(6) { transform: translate(-50%, -100%) rotate(45deg) scaleY(0); }
+.petal:nth-child(7) { transform: translate(-50%, -100%) rotate(135deg) scaleY(0); }
+.petal:nth-child(8) { transform: translate(-50%, -100%) rotate(225deg) scaleY(0); }
+.petal:nth-child(9) { transform: translate(-50%, -100%) rotate(315deg) scaleY(0); }
+
+.flower:hover .petal:nth-child(2) { transform: translate(-50%, -100%) rotate(0deg) scaleY(1); }
+.flower:hover .petal:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg) scaleY(1); }
+.flower:hover .petal:nth-child(4) { transform: translate(-50%, -100%) rotate(180deg) scaleY(1); }
+.flower:hover .petal:nth-child(5) { transform: translate(-50%, -100%) rotate(270deg) scaleY(1); }
+
+.flower:hover .petal:nth-child(6) { transform: translate(-50%, -100%) rotate(45deg) scaleY(1); }
+.flower:hover .petal:nth-child(7) { transform: translate(-50%, -100%) rotate(135deg) scaleY(1); }
+.flower:hover .petal:nth-child(8) { transform: translate(-50%, -100%) rotate(225deg) scaleY(1); }
+.flower:hover .petal:nth-child(9) { transform: translate(-50%, -100%) rotate(315deg) scaleY(1); }
+
+</style>
+</head>
+
+<body>
+    
+<div class="flower">
+    <div class="center"></div>
+
+    <!-- grandes -->
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+
+    <!-- pequenas -->
+    <div class="petal small"></div>
+    <div class="petal small"></div>
+    <div class="petal small"></div>
+    <div class="petal small"></div>
+</div>
+</div>
+
+</body>
+</html>
